@@ -62,7 +62,7 @@ namespace WindowsFormsApp
 
         public void WindowShowing(IWindowInfo window, bool bShow)
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
 
         public void ShowNotification(string message, System.Windows.Point location, int timeToShow = 2500)

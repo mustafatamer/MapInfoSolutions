@@ -54,22 +54,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MapInfo.Application">
-      <HintPath>..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Application.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Application.dll</HintPath>
     </Reference>
     <Reference Include="MapInfo.Constants">
-      <HintPath>..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Constants.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Constants.dll</HintPath>
     </Reference>
     <Reference Include="MapInfo.Controls">
-      <HintPath>..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Controls.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Controls.dll</HintPath>
     </Reference>
     <Reference Include="MapInfo.Events">
-      <HintPath>..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Events.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Events.dll</HintPath>
     </Reference>
     <Reference Include="MapInfo.StyleResources">
-      <HintPath>..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.StyleResources.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.StyleResources.dll</HintPath>
     </Reference>
     <Reference Include="MapInfo.Types">
-      <HintPath>..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Types.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Types.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -122,6 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
