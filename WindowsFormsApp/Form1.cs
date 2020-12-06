@@ -25,12 +25,12 @@ namespace WindowsFormsApp
 
         public void SetActiveWindow(IWindowInfo win, bool internalUse = true)
         {
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         public void SetNextActiveWindow()
         {
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         public void WindowCreated(IWindowInfo window, IEnumerable<KeyValuePair<string, string>> properties)
@@ -52,17 +52,17 @@ namespace WindowsFormsApp
 
         public void PreviewWindowClosed(IWindowInfo window)
         {
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         public void WindowClosed(IWindowInfo window)
         {
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         public void WindowShowing(IWindowInfo window, bool bShow)
         {
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         public void ShowNotification(string message, System.Windows.Point location, int timeToShow = 2500)
@@ -72,17 +72,17 @@ namespace WindowsFormsApp
 
         public void SetApplicationTitle(string title)
         {
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         public void SetApplicationIcon(Uri icon)
         {
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         public void SetWindowProperty(IWindowInfo win, WindowProps property, string value)
         {
-           // throw new NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         public TReturnType GetWindowProperty<TReturnType>(IWindowInfo win, WindowProps property)
@@ -106,28 +106,29 @@ namespace WindowsFormsApp
             Program.miApplication = MapInfoCore.Initialize(Handle, this);
             string WorkSpacePath = System.Windows.Forms.Application.StartupPath + @"\MI_DATA\DefaultMI.WOR";
             Program.miApplication.RunMapBasicCommand("Run application \"" + WorkSpacePath + "\"");
+            CustomTools.CustomToolButtons.Instance.LoadCustomTools(this);
         }
 
-        public void ExecuteCommand(MapInfoCommand cmd , object sender)
+        public void ExecuteCommand(MapInfoCommand cmd, object sender)
         {
-            if (cmd.CanExecute(sender , null))
+            if (cmd.CanExecute(sender, null))
             {
                 cmd.Execute(sender, null);
             }
         }
-  
+
 
         private void TabloAc_Click(object sender, EventArgs e)
         {
             ExecuteCommand(ApplicationCommands.OpenTable, sender);
         }
 
-        private void buttonTumTablolariKapat_Click(object sender, EventArgs e)
+        private void TumTablolariKapat_Click(object sender, EventArgs e)
         {
             ExecuteCommand(ApplicationCommands.CloseAll, sender);
         }
 
-        private void buttonTabloKapat_Click(object sender, EventArgs e)
+        private void TabloKapat_Click(object sender, EventArgs e)
         {
             ExecuteCommand(ApplicationCommands.CloseTable, sender);
         }
@@ -135,6 +136,31 @@ namespace WindowsFormsApp
         private void WorkspaceAc_Click(object sender, EventArgs e)
         {
             ExecuteCommand(ApplicationCommands.OpenWorkspace, sender);
+        }
+
+        private void tsbtnSelect_Click(object sender, EventArgs e)
+        {
+            ExecuteCommand(ToolCommands.Select, sender);
+        }
+
+        private void tsbtnPan_Click(object sender, EventArgs e)
+        {
+            ExecuteCommand(ToolCommands.Recenter, sender);
+        }
+
+        private void tsbtnZoomOut_Click(object sender, EventArgs e)
+        {
+            ExecuteCommand(ToolCommands.ZoomOut, sender);
+        }
+
+        private void tsbtnZoomIn_Click(object sender, EventArgs e)
+        {
+            ExecuteCommand(ToolCommands.ZoomIn, sender);
+        }
+
+        private void tsbtnInfo_Click(object sender, EventArgs e)
+        {
+            // ExecuteCommand(ToolCommands.)
         }
     }
 }

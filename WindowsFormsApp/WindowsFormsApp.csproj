@@ -89,6 +89,18 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BilgiListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BilgiListe.Designer.cs">
+      <DependentUpon>BilgiListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomTools\ButtonName.cs" />
+    <Compile Include="CustomTools\CustomListItem.cs" />
+    <Compile Include="CustomTools\CustomToolButtons.cs" />
+    <Compile Include="CustomTools\DelegateCommand.cs" />
+    <Compile Include="CustomTools\DrawingModeDef.cs" />
+    <Compile Include="CustomTools\IconDef.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BilgiListe.resx">
+      <DependentUpon>BilgiListe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

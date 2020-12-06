@@ -13,6 +13,7 @@ namespace WindowsFormsApp
     {
         public static MapInfo.Types.IMapInfoApplication miApplication { get; set; }
 
+        public static BilgiListe _form = new BilgiListe();
         [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool SetDllDirectory(string lpPathName);
