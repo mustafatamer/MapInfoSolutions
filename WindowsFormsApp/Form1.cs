@@ -115,12 +115,9 @@ namespace WindowsFormsApp
                 cmd.Execute(sender, null);
             }
         }
-        private void buttonWorkSpaceAc_Click(object sender, EventArgs e)
-        {
-            ExecuteCommand(ApplicationCommands.OpenWorkspace, sender);
-        }
+  
 
-        private void buttonTabloAc_Click(object sender, EventArgs e)
+        private void TabloAc_Click(object sender, EventArgs e)
         {
             ExecuteCommand(ApplicationCommands.OpenTable, sender);
         }
@@ -133,6 +130,11 @@ namespace WindowsFormsApp
         private void buttonTabloKapat_Click(object sender, EventArgs e)
         {
             ExecuteCommand(ApplicationCommands.CloseTable, sender);
+        }
+
+        private void WorkspaceAc_Click(object sender, EventArgs e)
+        {
+            ExecuteCommand(ApplicationCommands.OpenWorkspace, sender);
         }
     }
 }
