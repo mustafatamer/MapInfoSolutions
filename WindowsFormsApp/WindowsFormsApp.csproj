@@ -55,21 +55,27 @@
   <ItemGroup>
     <Reference Include="MapInfo.Application">
       <HintPath>..\..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Application.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MapInfo.Constants">
       <HintPath>..\..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Constants.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MapInfo.Controls">
       <HintPath>..\..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Controls.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MapInfo.Events">
       <HintPath>..\..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Events.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MapInfo.StyleResources">
       <HintPath>..\..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.StyleResources.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MapInfo.Types">
       <HintPath>..\..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Types.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -149,6 +155,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1 %28377%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MapInfo">
+      <Guid>{2F1FC55B-C08E-4671-BF0C-00CE9BBF44F9}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
