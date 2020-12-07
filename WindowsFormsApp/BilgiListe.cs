@@ -40,22 +40,6 @@ namespace WindowsFormsApp
                 throw;
             }
         }
-        public void ShowInfo(string key)
-        {
-            if (key.Split('#').Length == 2)
-            {
-                string tabloAdi = key.Split('#')[0];
-                string rowId = key.Split('#')[1];
-                switch (key)
-                {
-                    case "SBK_OGHAT":
-                        System.Windows.Forms.MessageBox.Show("SBK_OGHAT");
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-        }
+      
     }
 }

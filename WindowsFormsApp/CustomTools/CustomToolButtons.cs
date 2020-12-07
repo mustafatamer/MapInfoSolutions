@@ -44,7 +44,8 @@ namespace WindowsFormsApp.CustomTools
             _dic.Add(buttonName.ToString(),
                 Program.miApplication.RegisterCustomTool(new Button(),
                 new DelegateCommand(methodName),
-                null, (int)drawingModeDef,
+                null,
+                (int)drawingModeDef,
                 mapCursorId.ToString(),
                 bModifierKey));
 

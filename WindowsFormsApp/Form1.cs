@@ -14,6 +14,8 @@ using MapInfo.Application;
 using MapInfo.Commands;
 using MapInfo.Types;
 
+using WindowsFormsApp.CustomTools;
+
 namespace WindowsFormsApp
 {
     public partial class Form1 : Form, IIntegratedMappingApplication
@@ -52,16 +54,19 @@ namespace WindowsFormsApp
 
         public void PreviewWindowClosed(IWindowInfo window)
         {
+            
             // throw new NotImplementedException();
         }
 
         public void WindowClosed(IWindowInfo window)
         {
+            window.Close();
             // throw new NotImplementedException();
         }
 
         public void WindowShowing(IWindowInfo window, bool bShow)
         {
+
             // throw new NotImplementedException();
         }
 
@@ -106,7 +111,7 @@ namespace WindowsFormsApp
             Program.miApplication = MapInfoCore.Initialize(Handle, this);
             string WorkSpacePath = System.Windows.Forms.Application.StartupPath + @"\MI_DATA\DefaultMI.WOR";
             Program.miApplication.RunMapBasicCommand("Run application \"" + WorkSpacePath + "\"");
-            CustomTools.CustomToolButtons.Instance.LoadCustomTools(this);
+            CustomToolButtons.Instance.LoadCustomTools(this);
         }
 
         public void ExecuteCommand(MapInfoCommand cmd, object sender)
@@ -160,7 +165,25 @@ namespace WindowsFormsApp
 
         private void tsbtnInfo_Click(object sender, EventArgs e)
         {
-            // ExecuteCommand(ToolCommands.)
+            CustomToolButtons.Instance.GetInfo(sender);
+        }
+
+        public void ShowInfo(string key)
+        {
+            if (key.Split('#').Length == 2)
+            {
+                string tabloAdi = key.Split('#')[0];
+                string rowId = key.Split('#')[1];
+                switch (key)
+                {
+                    case "SBK_OGHAT":
+                        System.Windows.Forms.MessageBox.Show("SBK_OGHAT");
+                        break;
+                    default:
+                        break;
+                }
+            }
+
         }
     }
 }

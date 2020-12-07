@@ -13,7 +13,7 @@ namespace WindowsFormsApp
     {
         public static MapInfo.Types.IMapInfoApplication miApplication { get; set; }
 
-        public static BilgiListe _form = new BilgiListe();
+        public static Form1 _form ;
         [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool SetDllDirectory(string lpPathName);
@@ -23,13 +23,14 @@ namespace WindowsFormsApp
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            _form = new Form1();
             SetDllDirectory(@"C:\Program Files\MapInfo\Professional");
             MapInfoCore.StartUp(null);
 
-            Application.Run(new Form1());
+            Application.Run(_form);
         }
     }
 }
