@@ -185,5 +185,15 @@ namespace WindowsFormsApp
             }
 
         }
+
+        public void ShowNotification(string message, System.Windows.Point location, int timeToShow = 2500, bool addToList = false)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string[] GetStatusFieldText(int field = -1)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
