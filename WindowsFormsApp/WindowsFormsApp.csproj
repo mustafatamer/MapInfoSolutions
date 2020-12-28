@@ -53,6 +53,19 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EDABIS2.Business">
+      <HintPath>D:\sc\PowernetMaestroKCETAS\EDABIS2.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="EDABIS2.BusinessMapInfo">
+      <HintPath>D:\sc\PowernetMaestroKCETAS\EDABIS2.BusinessMapInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="EDABIS2.MapInfoHelper">
+      <HintPath>D:\sc\PowernetMaestroKCETAS\EDABIS2.MapInfoHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="EDABIS2.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\sc\PowernetMaestroKCETAS\EDABIS2.Utils.dll</HintPath>
+    </Reference>
     <Reference Include="MapInfo.Application">
       <HintPath>..\..\..\..\..\..\..\Program Files\MapInfo\Professional\MapInfo.Application.dll</HintPath>
       <Private>True</Private>
@@ -115,6 +128,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestEdabis.cs" />
     <EmbeddedResource Include="BilgiListe.resx">
       <DependentUpon>BilgiListe.cs</DependentUpon>
     </EmbeddedResource>

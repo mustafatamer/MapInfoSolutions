@@ -48,6 +48,7 @@ namespace WindowsFormsApp
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelMap = new System.Windows.Forms.Panel();
             this.panelBottom = new System.Windows.Forms.Panel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.panelTop.SuspendLayout();
             this.tabControlMenu.SuspendLayout();
             this.tpDosya.SuspendLayout();
@@ -97,7 +98,8 @@ namespace WindowsFormsApp
             this.btnWorkspaceAc,
             this.btnTabloAc,
             this.btnTabloKapat,
-            this.btnTumTablolariKapat});
+            this.btnTumTablolariKapat,
+            this.toolStripButton1});
             this.tsDosya.Location = new System.Drawing.Point(3, 3);
             this.tsDosya.Name = "tsDosya";
             this.tsDosya.Size = new System.Drawing.Size(780, 48);
@@ -288,6 +290,16 @@ namespace WindowsFormsApp
             this.panelBottom.Size = new System.Drawing.Size(794, 34);
             this.panelBottom.TabIndex = 2;
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 45);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,6 +344,7 @@ namespace WindowsFormsApp
         private System.Windows.Forms.ToolStripButton tsbtnZoomOut;
         private System.Windows.Forms.ToolStripButton tsbtnZoomIn;
         private System.Windows.Forms.ToolStripButton tsbtnInfo;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 

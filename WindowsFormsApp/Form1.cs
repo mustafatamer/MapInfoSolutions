@@ -10,6 +10,8 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Forms.Integration;
 
+using EDABIS2.MapInfoHelper;
+
 using MapInfo.Application;
 using MapInfo.Commands;
 using MapInfo.Types;
@@ -108,7 +110,19 @@ namespace WindowsFormsApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            MapInfoCore.StartUp(new string[1]
+         {
+                "-automation"
+         });
+
+         
             Program.miApplication = MapInfoCore.Initialize(Handle, this);
+            MapInfoClass.Instance = new MapInfoClass(Program.miApplication);
+            if (MapInfoClass.Instance.miApp == null)
+            {
+                throw new ApplicationException();
+            }
             string WorkSpacePath = System.Windows.Forms.Application.StartupPath + @"\MI_DATA\DefaultMI.WOR";
             Program.miApplication.RunMapBasicCommand("Run application \"" + WorkSpacePath + "\"");
             CustomToolButtons.Instance.LoadCustomTools(this);
@@ -194,6 +208,11 @@ namespace WindowsFormsApp
         public string[] GetStatusFieldText(int field = -1)
         {
             throw new NotImplementedException();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            TestEdabis testEdabis = new TestEdabis();
         }
     }
 }

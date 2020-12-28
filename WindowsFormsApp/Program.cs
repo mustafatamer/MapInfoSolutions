@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MapInfo.Application;
 using System.Runtime.InteropServices;
-
+using EDABIS2.MapInfoHelper;
 
 namespace WindowsFormsApp
 {
@@ -28,8 +28,7 @@ namespace WindowsFormsApp
             Application.SetCompatibleTextRenderingDefault(false);
             _form = new Form1();
             SetDllDirectory(@"C:\Program Files\MapInfo\Professional");
-            MapInfoCore.StartUp(null);
-
+          
             Application.Run(_form);
         }
     }
